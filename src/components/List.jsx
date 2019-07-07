@@ -10,7 +10,7 @@ class List extends Component {
                 <p>{last_name}</p>
                 <p>{email}</p>
                 <p>{phone}</p>
-                <button>Edit</button>
+                <button onClick={() => {this.props.onEdit(this.props.contact)}}>Edit</button>
                 <button onClick={() => this.props.onDelete(this.props.contact)}>X</button>
             </li>
         );
