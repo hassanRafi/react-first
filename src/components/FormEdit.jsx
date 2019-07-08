@@ -10,6 +10,13 @@ class FormEdit extends Component {
         avatar_url: this.props.formParams.avatar_url,
     };
 
+    componentDidUpdate(prevProps) {
+        console.log(prevProps.formParams.id);
+        if (prevProps.formParams.id !== this.props.formParams.id) {
+            this.setState(this.props.formParams);
+        }
+    }
+
     handleEdit = (event) => {
         event.preventDefault();
         this.props.saveEdit(this.state);
@@ -21,6 +28,7 @@ class FormEdit extends Component {
         });
     }
     render() {
+        console.log("should render");
         return (
             <form onSubmit={this.handleEdit}>
                 <p>FirstName

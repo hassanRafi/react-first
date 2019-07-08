@@ -13,7 +13,7 @@ class FormAdd extends Component {
             [event.target.name]: event.target.value
         });
     }
-
+    
     handleSubmit = (event) => {
         event.preventDefault();
         const newContact = { ...this.state };
