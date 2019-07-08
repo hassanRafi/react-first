@@ -45,6 +45,7 @@ class App extends Component {
 
   handleSaveEdit = (editedInfo) => {
     console.log(editedInfo);
+    
     let index;
     this.state.contacts.forEach((contact, i) => {
       if (contact.id === editedInfo.id) {

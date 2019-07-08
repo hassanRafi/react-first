@@ -16,12 +16,8 @@ class FormAdd extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const newContact = {};
-        newContact.first_name = this.state.first_name;
-        newContact.last_name = this.state.last_name;
-        newContact.email = this.state.email;
-        newContact.phone = this.state.phone;
-        newContact.avatar_url = `https://robohash.org/${this.state.first_name}?size=100x100&set=set1`
+        const newContact = { ...this.state };
+        newContact.avatar_url = `https://robohash.org/${this.state.first_name}?size=100x100&set=set1`;
         this.props.onAdd(newContact);
     }
     render() {
