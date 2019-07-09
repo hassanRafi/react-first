@@ -13,6 +13,7 @@ class App extends Component {
     showEdit: false,
   };
 
+
   handleChange = (event) => {
     this.setState({searchWord: event.target.value });
   }
@@ -27,12 +28,6 @@ class App extends Component {
 
   handleAdd = (obj) => {
     const newContact = {...obj, id: this.state.contacts[this.state.contacts.length - 1].id + 1};
-    // newContact.id = this.state.contacts[this.state.contacts.length - 1].id + 1;
-    // newContact.first_name = obj.first_name;
-    // newContact.last_name = obj.last_name;
-    // newContact.email = obj.email;
-    // newContact.phone = obj.phone;
-    // newContact.avatar_url = obj.avatar_url;
     let contacts = this.state.contacts.slice();
     contacts.push(newContact);
     this.setState({ contacts });  
@@ -73,8 +68,7 @@ class App extends Component {
         <ul className="container">
           {contacts.map((contact) => <List key={contact.id} contact={contact} onDelete={this.handleDelete} onEdit={this.handleEdit}/>)}
         </ul>
-        {/* <FormAdd onAdd={this.handleAdd} key={this.state.contacts[this.state.contacts.length - 1].id + 1} /> */}
-        <FormAdd onAdd={this.handleAdd} />
+        <FormAdd onAdd={this.handleAdd}/>
       </>
     );
   }
