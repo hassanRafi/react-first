@@ -24,16 +24,16 @@ class FormAdd extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
             <p>FirstName
-                <input type="text" name="first_name" onChange={this.handleChange}/>
+                <input type="text" name="first_name" onChange={this.handleChange} required/>
             </p>
             <p>LastName        
-                <input type="text" name="last_name" onChange={this.handleChange}/>
+                <input type="text" name="last_name" onChange={this.handleChange} required/>
             </p>
             <p>Email
-                <input type="text" name="email" onChange={this.handleChange}/>
+                <input type="text" name="email" onChange={this.handleChange} required/>
             </p>
             <p>Phone
-                <input type="text" name="phone" onChange={this.handleChange}/>
+                <input type="text" name="phone" onChange={this.handleChange} required/>
             </p>
             <button>Save</button>
             </form>

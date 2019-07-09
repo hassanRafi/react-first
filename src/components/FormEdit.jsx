@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 class FormEdit extends Component {
@@ -32,16 +33,16 @@ class FormEdit extends Component {
         return (
             <form onSubmit={this.handleEdit}>
                 <p>FirstName
-                    <input type="text" name="first_name" value={this.state.first_name} onChange={this.handleChange} />
+                    <input type="text" name="first_name" value={this.state.first_name} onChange={this.handleChange} required/>
                 </p>
                 <p>LastName
-                    <input type="text" name="last_name" value={this.state.last_name} onChange={this.handleChange}/>
+                    <input type="text" name="last_name" value={this.state.last_name} onChange={this.handleChange} required/>
                 </p>
                 <p>Email
-                    <input type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
+                    <input type="text" name="email" value={this.state.email} onChange={this.handleChange} required/>
                 </p>
                 <p>Phone
-                    <input type="text" name="phone" value={this.state.phone} onChange={this.handleChange}/>
+                    <input type="text" name="phone" value={this.state.phone} onChange={this.handleChange} required/>
                 </p>
                 <button>save</button>
             </form>
